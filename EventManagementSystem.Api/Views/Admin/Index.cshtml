@@ -1,0 +1,77 @@
+﻿@model GetEventResponse
+@{
+    ViewData["Title"] = "My Events";
+}
+
+<h2>All Events</h2>
+
+<p>
+    <a asp-action="Registrations">View All Registrations</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Location
+            </th>
+            <th>
+                Max Participants
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                Date Created
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Events)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaxParticipants)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateCreated)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts
+{
+    <script src="~/js/login/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/js/login/popper.js" asp-append-version="true"></script>
+    <script src="~/js/login/bootstrap.min.js" asp-append-version="true"></script>
+    <script src="~/js/login/main.js" asp-append-version="true"></script>
+}
+
+
+

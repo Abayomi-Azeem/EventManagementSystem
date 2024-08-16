@@ -1,0 +1,23 @@
+﻿@model IEnumerable<GetRegistrationsResponse>
+@{
+    ViewData["Title"] = "My Events";
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Event</th>
+            <th>User Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EventTitle</td>
+                <td>@item.EmailAddres</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-action="Index">Back </a>

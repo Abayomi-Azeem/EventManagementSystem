@@ -1,0 +1,36 @@
+﻿@model GetEventResponse
+@{
+    ViewData["Title"] = "Event Details";
+}
+
+<h2>@Model.SingleEvent.Title</h2>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <div class="login-wrap p-4 p-md-5">
+
+                    <dl class="row">
+                        <dt class="col-sm-2">Description</dt>
+                        <dd class="col-sm-10">@Model.SingleEvent.Description</dd>
+
+                        <dt class="col-sm-2">Date</dt>
+                        <dd class="col-sm-10">@Model.SingleEvent.Date</dd>
+
+                        <dt class="col-sm-2">Location</dt>
+                        <dd class="col-sm-10">@Model.SingleEvent.Location</dd>
+                                                
+                    </dl>
+
+                    <form method="post" asp-action="RegisterEvent" asp-route-id="@Model.SingleEvent.Id">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

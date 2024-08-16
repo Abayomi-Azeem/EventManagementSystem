@@ -1,0 +1,90 @@
+@EventManagementSystem.Api_HostAddress = http://localhost:5155/api
+
+POST {{EventManagementSystem.Api_HostAddress}}/auth/login
+Content-Type: application/json
+
+{
+    "email" : "admin@test.ng",
+    "password"  : "abayomi"
+}
+###
+
+POST {{EventManagementSystem.Api_HostAddress}}/auth/login
+Content-Type: application/json
+
+{
+    "email" : "testorganiser@gmail.com",
+    "password"  : "abayomi"
+}
+###
+
+POST {{EventManagementSystem.Api_HostAddress}}/auth/login
+Content-Type: application/json
+
+{
+    "email" : "abayomioyaifo@gmail.com",
+    "password"  : "abayomi"
+}
+###
+
+POST {{EventManagementSystem.Api_HostAddress}}/auth/register
+Content-Type: application/json
+
+{
+    "email" : "abayomioyaifo@gmail.com",
+    "password"  : "abayomi",
+    "firstName": "abayomi",
+    "lastName": "oyaifo",
+    "phoneNumber": "09011094976"
+}
+###
+
+POST {{EventManagementSystem.Api_HostAddress}}/auth/create-organizer
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFiYXlvbWlveWFpZm9AZ21haWwuY29tIiwibmFtZWlkIjoiMiIsIlJvbGUiOiJQYXJ0aWNpcGFudCIsImV4cCI6MTcyMzgwODY5NiwiaXNzIjoiQnJpZ2h0U3RhciIsImF1ZCI6IkJyaWdodFN0YXIifQ.s5nTEF3w1TpMGBngzRRNfvQ8st7HS4EyLmbdo-6C3Fk
+
+{
+    "email" : "testorganiser@gmail.com",
+    "password"  : "abayomi",
+    "firstName": "abayomi",
+    "lastName": "oyaifo",
+    "phoneNumber": "09011094976"
+}
+###
+
+POST {{EventManagementSystem.Api_HostAddress}}/event
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RvcmdhbmlzZXJAZ21haWwuY29tIiwiVXNlcklkIjoiNCIsIlJvbGUiOiJPcmdhbml6ZXIiLCJleHAiOjE3MjM4MDc1MjAsImlzcyI6IkJyaWdodFN0YXIiLCJhdWQiOiJCcmlnaHRTdGFyIn0.Bfq9BfM5y7E0rHbs2CvX5bl8CZ20DYijTFgJFXOccKc
+
+{
+    "title" : "Wedding Party",
+    "description"  : "Owambe Saturday",
+    "location": "Ikeja",
+    "maxParticipants": 5,
+    "date": "2024-08-16T15:30:00"
+}
+###
+
+PUT {{EventManagementSystem.Api_HostAddress}}/event
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RvcmdhbmlzZXJAZ21haWwuY29tIiwiVXNlcklkIjoiNCIsIlJvbGUiOiJPcmdhbml6ZXIiLCJleHAiOjE3MjM4MDk0MTIsImlzcyI6IkJyaWdodFN0YXIiLCJhdWQiOiJCcmlnaHRTdGFyIn0.RaJ6QTbEXD9xF4I5OUjLSPXNWc6IhzBgJkAFQSPA2vA
+
+{
+    "eventId":2,
+    "title" : "Wedding Party 3",
+    "description"  : "Owambe Friday",
+    "location": "Ikeja",
+    "maxParticipants": 7,
+    "date": "2024-08-16T15:30:00"
+}
+###
+
+DELETE {{EventManagementSystem.Api_HostAddress}}/event/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RvcmdhbmlzZXJAZ21haWwuY29tIiwiVXNlcklkIjoiNCIsIlJvbGUiOiJPcmdhbml6ZXIiLCJleHAiOjE3MjM4MDk0MTIsImlzcyI6IkJyaWdodFN0YXIiLCJhdWQiOiJCcmlnaHRTdGFyIn0.RaJ6QTbEXD9xF4I5OUjLSPXNWc6IhzBgJkAFQSPA2vA
+
+###
+
+POST {{EventManagementSystem.Api_HostAddress}}/event/register/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFiYXlvbWlveWFpZm9AZ21haWwuY29tIiwiVXNlcklkIjoiMiIsIlJvbGUiOiJQYXJ0aWNpcGFudCIsImV4cCI6MTcyMzgxMjY1NywiaXNzIjoiQnJpZ2h0U3RhciIsImF1ZCI6IkJyaWdodFN0YXIifQ.0sP8XZ1tNXkBsZAcYSxn65qekiEAB2_tDzYtbQ08oq4
+
+###

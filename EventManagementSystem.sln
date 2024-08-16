@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A27BE5C2-89BF-43F9-B51E-FF55F0D9B3D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{87857DDF-256C-4601-B462-6089963466C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventManagementSystem.Api", "EventManagementSystem.Api\EventManagementSystem.Api.csproj", "{BCEE1729-DAC1-42DA-817F-0609A5997E9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCEE1729-DAC1-42DA-817F-0609A5997E9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCEE1729-DAC1-42DA-817F-0609A5997E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCEE1729-DAC1-42DA-817F-0609A5997E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCEE1729-DAC1-42DA-817F-0609A5997E9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BCEE1729-DAC1-42DA-817F-0609A5997E9A} = {A27BE5C2-89BF-43F9-B51E-FF55F0D9B3D0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6C9F9FD-0159-4D15-A7E4-6496213135C2}
+	EndGlobalSection
+EndGlobal

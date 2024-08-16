@@ -1,0 +1,60 @@
+﻿@model GetEventResponse
+@{
+    ViewData["Title"] = "Events";
+}
+
+<h2>Available Events</h2>
+@if (ViewBag.IsError == "true")
+{
+    <div class="text-danger" id="Error"> @ViewBag.Error </div>
+}
+@if (ViewBag.IsError == "false")
+{
+    <div class="text-success" id="Error"> @ViewBag.Error </div>
+
+}
+
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-12">
+                <div class="login-wrap p-2" style="width:90%">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Date</th>
+                                <th>Location</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Events)
+                            {
+                                <tr>
+                                    <td>@item.Title</td>
+                                    <td>@item.Date</td>
+                                    <td>@item.Location</td>
+                                    <td>
+                                        <a asp-action="RegisterEvent" asp-route-id="@item.Id">Register</a> |
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts
+                                    {
+    <script src="~/js/login/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/js/login/popper.js" asp-append-version="true"></script>
+    <script src="~/js/login/bootstrap.min.js" asp-append-version="true"></script>
+    <script src="~/js/login/main.js" asp-append-version="true"></script>
+}
+
+
+
